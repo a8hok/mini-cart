@@ -1,0 +1,178 @@
+.product-box-container {
+  display: flex;
+  width: 960px;
+  margin: 0 auto;
+}
+
+.product-box {
+  width: 220px;
+  height: 350px;
+  border: 1px solid #c8c8c8;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.product-img img {
+  width: 100%;
+}
+
+.product-title {
+  font-size: 18px;
+  padding: 10px;
+}
+
+.product-ingredients {
+  padding: 0px 10px;
+}
+
+.product-description {
+  padding: 10px;
+}
+
+.header {
+  background: #ff7c7c;
+  padding: 20px;
+  float: left;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.header button {
+  float: right;
+  height: 40px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #c55757;
+  color: #fff;
+  box-shadow: none;
+  border: 1px solid #fff;
+  border-radius: 4px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.modal-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  top: 0;
+  left: 0;
+  opacity: 0.7;
+}
+
+.product-modal {
+  width: 900px;
+  height: 600px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -450px;
+  margin-top: -300px;
+}
+
+.close-icon {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  background: #ff7c7c;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  padding: 2px;
+}
+
+.product-modal-container {
+  display: flex;
+  margin: 30px;
+}
+
+.product-modal-img {
+  margin-right: 30px;
+}
+
+.product-modal-img img {
+  max-width: 400px;
+}
+
+h1.product-title {
+  margin: 0 0 20px 0;
+  padding: 0;
+  font-size: 32px;
+}
+
+h2 {
+  margin: 20px 0;
+  padding: 0;
+}
+
+.product-modal-container .product-ingredients, .product-modal-container .product-description {
+  padding: 0;
+}
+
+.product-modal-container  .product-price {
+  margin: 20px 0;
+}
+
+.modal-container {
+  padding: 30px;
+}
+
+.modal-container h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.cart-row {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #c8c8c8;
+  display: flex;
+}
+
+.cart-row img {
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  border: 1px solid #c8c8c8;
+  padding: 2px;
+}
+
+.cart-row-right {
+  width: 80%;
+  display: flex;
+  position: relative;
+}
+
+input[type="number"] {
+  padding: 10px;
+  width: 70px;
+  height: 40px;
+  margin: 0 10px;
+}
+
+.checkout-btn {
+  background: #ff7c7c;
+    color: #fff;
+    padding: 12px 20px;
+    border: 1px solid #c54343;
+    font-size: 14px;
+    float: right;
+}
+
+.cart-item-remove {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: red;
+  cursor: pointer;
+}
