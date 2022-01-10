@@ -1,6 +1,25 @@
-const getLocalStoreData = JSON.parse(localStorage.getItem('product')) || [];
+let productInfo = [
+    {
+        "id": "123442",
+        "title": "Product 1",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+        "image": "/product1.jpeg",
+        "price": "39",
+        "currency": "$"
+    },
+    {
+        "id": "123443",
+        "title": "Product 2",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+        "image": "/product2.jpeg",
+        "price": "39",
+        "currency": "$"
+    }
+];
+const getLocalStoreData = JSON.parse(localStorage.getItem('product')) || productInfo;
 const getCartInfo = JSON.parse(localStorage.getItem('cartInfo')) || [];
 const initialState =  { product: getLocalStoreData, cartInfo: getCartInfo };
+
 
 export const ProductReducer = ( state = initialState, action) => {
     const { item, type } = action;

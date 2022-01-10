@@ -19,7 +19,8 @@ function App({productList, history, cartDetails}) {
   const [showModal, setshowModal] = useState(false);
   const [cartModal, setcartModal] = useState(false)
 
-  const productModal = (product) => {
+  const enableProductModal = (product) => {
+    console.log(product)
     setselectedProduct(product);
     setshowModal(true);
   }
@@ -42,12 +43,11 @@ function App({productList, history, cartDetails}) {
         <div className="product-container">
         <div className="product-box-container">
           {productList.length && productList.map( (product, index) => 
-            <div onClick={() => productModal(product)} className="product-box" key={index} >
-              <div className="product-img"><img src={product.imageUrl} /></div>
-              <div className="product-title">{product.productName}</div>
-              <div className="product-title">&#8377; {product.price}</div>
-              
-              
+            <div onClick={() => enableProductModal(product)} className="product-box" key={index} >
+              <div className="product-img"><img src={product.image} /></div>
+              <div className="product-title">{product.title}</div>
+              <div className="product-description">{product.desc}</div>
+              <div className="product-price">&#8377; {product.price}</div>
             </div>
           )}
         </div>

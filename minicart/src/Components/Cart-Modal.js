@@ -4,7 +4,6 @@ import { withRouter } from 'react-router-dom';
 import { REMOVE_CART_ITEM } from '../Action/Action'
 
  const mapStatetoProps = (state) => ({cartDetails: state.cartInfo})
-// ({cartDetails: state.cartInfo})
 
 const mapDispatchtoProps = (dispatch) => ({removeCartDetails: (item) => dispatch(REMOVE_CART_ITEM(item))})
 
@@ -26,6 +25,7 @@ function CartModal({cartDetails, closeModal, removeCartDetails} ) {
     const handleCheckout = () => {
         closeModal()
     }
+
     return (
         <>
         <div className="modal-overlay"></div>
@@ -39,13 +39,12 @@ function CartModal({cartDetails, closeModal, removeCartDetails} ) {
 
                         <div className="cart-row" key={index}>
                                 <div className="cart-row-right">
-                                    <input type="checkbox" name={item.productName} checked />
-                                    <img src={item.imageUrl} />
-                                    <div>{item.productName}</div>
+                                    <input type="checkbox" name={item.title} checked />
+                                    <img src={item.image} />&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <div>{item.title}</div>&nbsp;&nbsp;&nbsp;
+                                    <div className="cart-price"> &#8377; {item.price}</div> &nbsp;&nbsp;&nbsp;&nbsp;
                                     <div className="cart-item-remove" onClick={(e) => removeCartItem(item.id)}>Remove</div>
                                 </div>
-                                <input type="number" id={index} name="quantity" min="1" onChange ={(e) => formOnChange(e, item.price)}/>
-                                <div className="cart-price"> &#8377; {item.price}</div>
                         </div>
                         ) 
                     }
